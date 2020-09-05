@@ -134,9 +134,11 @@
             line-height: 1.2;
             font-weight: 900
         }
-        .profile { height: 200px;
+        .profile {
+          height: 200px;
           width: 160px;
-          border-radius: 100%;
+          display: inline-block;
+          overflow: hidden;
           max-width:100%;}
         h1,
         h2,
@@ -166,6 +168,7 @@
         }
 
         td {
+            background-color: coral;
 
         }
 
@@ -452,7 +455,8 @@
             }
 
             .Title {
-                font-size: 4.5rem
+                font-size: 4.5rem;
+                
             }
 
             .l-Header {
@@ -569,19 +573,26 @@
 
         <div class="l-Header">
             <div class="l-Header-col">
-                  <table cellspacing="25">
-                    <td align="left">
+                  <table>
+                    <tr>
+                    <td align="center">
                     <h1 class="Title">
                        
-                            Sultan Ahmeds
+                            Sultan Ahmed
                         
                         <span class="Title-sub">DevOps | Cloud | TeleCommunication</span>
                     </h1> </td>
                     <td>    <h2>      </h2></td>
-                    <td><img class="profile" src="Photograph_Sultan Ahmed.JPG" align="right" alt="Sultan's Profile Picture"> </td>
+                    <td style='width: 280px' align="right"><img class="profile" src="Photograph_Sultan Ahmed.JPG" alt="Sultan's Profile Picture"> </td>
+                    </tr>
                   </table>
-                </a>
             </div>
+           
+        <script>
+        window.onresize = function() {
+            document.getElementById("size").innerHTML = window.innerWidth;
+        };
+        </script>
             <!-- <div class="l-Header-col Contact">
                 <div>Dandenong, Melbourne</div>
                 <div>
@@ -594,7 +605,7 @@
         </div>
 
         <section class="l-Section">
-            <h2 class="l-Section-title h3 u-hidden@sm-down">Professional Synopsis</h2>
+            <h2 class="l-Section-title h3">Professional Synopsis</h2>
             <div class="l-Section-content">
                 <ul>
                     <li>Diversified work experience in system administration, cloud services, DevOps tools, IP & Fibre design and Project management.</li>
